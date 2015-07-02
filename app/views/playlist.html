@@ -1,0 +1,7 @@
+<div class="playlist">
+	<h1>Playlists</h1>
+	<ul>
+		<li ng-repeat="playlist in playlists"><a ui-sref="root.home.playlist({playlistId : playlist.id})">Playlist {{playlist.id}}: {{playlist.name}} </a></li>
+	</ul>
+	<a ui-sref="root.home.newplaylist">New playlist</a>
+</div>

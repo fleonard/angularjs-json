@@ -1,0 +1,146 @@
+$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
+
+@import 'reset';
+
+html, body {
+    
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1,h2,h3{
+font-family: sans-serif;
+    margin:0 20px 10px 0;
+    font-size:25px;
+}
+
+.content {
+    padding:20px 0;
+}
+
+.left {
+    float:left;
+    display:block;
+    margin:0 50px 0 20px;
+}
+
+.editview{
+    width: 78%;
+}
+
+ul {
+    li {
+        font-size:12px;
+        margin-bottom:5px;
+    }
+    ul{
+        margin-left: 15px; 
+    }
+}
+
+.clientList{
+    margin-bottom: 50px;
+}
+
+.clientList ul, .playlist ul{
+    margin-bottom: 15px;
+}
+
+.edit{
+    a{
+        margin-bottom: 10px;
+        display: block;
+    }
+    label{
+        margin-right: 10px;
+    }
+}
+
+.client {
+    position:relative;
+    background:black;
+    margin:10px 0;
+    overflow:hidden;
+
+    .region {
+        position:absolute;
+        display:block;
+
+        .info {
+            display:none;
+        }
+
+        &:hover {
+
+            .info{
+                display:block;
+                background:white;
+                position:absolute;
+                z-index:10;
+                padding:5px;
+
+                h3 {
+                    font-size : 15px;
+                    margin:0;
+                }
+
+                p {
+                    font-size : 12px;
+                    margin:0;
+                }    
+            }
+        }
+
+        .media {
+            position:relative;
+            margin:0;
+            z-index : 1;
+
+            video {
+                background:black;
+
+            }
+        }
+    }
+}
+
+.playlistedit{
+    .region{
+        float: left;
+        margin: 20px 100px 0 0;
+        p{
+            font-size : 14px;
+            margin: 10px 0;
+        }
+        ul li{
+            margin-left: 15px;
+        }
+        .form-control{
+            margin-top: 5px;
+            width: 50%;
+        }
+        #src{
+            width: 125%;
+        }
+        a{
+            cursor: pointer;
+        }
+    }
+}
+
+.new{
+    ul{
+        li{
+            margin: 15px 0;
+        }
+    }
+    .form-control{
+        margin-top: 5px;
+    }
+    select{
+        margin-bottom: 10px;
+    }
+}
+
+

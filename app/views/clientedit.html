@@ -1,0 +1,27 @@
+<div ng-controller="ClientEditController" >
+	<h2>Edit Client {{client.id}}</h2>
+	<p>Client Name: {{client.name}}</p>
+
+	<div class="client" style="width:{{client.width/8}}px; height:{{client.height/8}}px;">
+		<div class="region" ng-repeat="region in playlist.regions" 
+		style="width:{{region.w/8}}px; height:{{region.h/8}}px;left:{{region.x/8}}px;top:{{region.y/8}}px;z-index:{{region.z}};">
+			<div class="info">
+				<h3>Region: {{$index}}</h3>
+				<p>Type: {{region.t}}</p>
+				<p>source: {{region.source}}</p>
+			</div>
+			<div class="media" ng-switch on="region.t">
+				<img ng-switch-when="image" ng-src="{{region.source}}" width="{{region.w/8}}" height="{{region.h/8}}" />
+				<video ng-switch-when="video" width="{{region.w/8}}" height="{{region.h/8}}" autoplay loop muted>
+				  <source src="{{region.source}}" type="video/mp4">
+				Your browser does not support the video tag.
+				</video>
+			</div>
+
+		</div>
+	</div>
+	<div>
+		<label>Select your playlist</label><select ng-change="update(playlist)" ng-model='playlist' ng-options='p.name for p in playlists'/>
+		<a ui-sref="root.home.saved({clientId : client.id})"> save me</a>
+	</div>
+</div>

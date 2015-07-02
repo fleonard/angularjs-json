@@ -1,0 +1,15 @@
+<div class='new' ng-controller="NewClientController"> 
+	<h2>Create new Client</h2>
+	<ul>
+		<li>Name: <input id='name' class="form-control" type="text"></li>
+		<li>Width: <input id='w' class="form-control" type="text"></li>
+		<li>Heigth: <input id='h' class="form-control" type="text"></li>
+		<li>Screen Resolution</li>
+		<ul>
+			<li>Width: <input id='sw' class="form-control" type="text"></li>
+			<li>Heigth: <input id='sh' class="form-control" type="text"></li>
+		</ul>
+		<li>Select your playlist</li><select id='playlist' ng-model='playlist' ng-options='p.name for p in playlists'/>
+	</ul>
+	<a ng-click='create()' ui-sref="root.home.client({clientId : newClientId})">Create</a>
+</div>

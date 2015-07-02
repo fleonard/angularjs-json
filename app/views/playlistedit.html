@@ -1,0 +1,26 @@
+<div ng-controller="PlaylistEditController" >
+	<h2>Edit Playlist {{playlist.id}}</h2>
+	<p>Playlist Name: {{playlist.name}}</p>
+	<a ng-click='add()'>Add new Region</a>	
+
+	<div class="playlistedit">
+		<div id='{{$index}}' class='region' ng-repeat="region in regions track by $index">
+			<h2>Region {{$index}}</h2>
+			<p>Size</p>
+			<ul>
+				<li>Width: <input id='w' class="form-control" type="text" ng-model="region.w"></li>
+				<li>Height: <input id='h' class="form-control" type="text" ng-model="region.h"></li>
+			</ul>
+			<p>Position</p>
+			<ul>
+				<li>X: <input id='x' class="form-control" type="text" ng-model="region.x"></li>
+				<li>Y: <input id='y' class="form-control" type="text" ng-model="region.y"></li>
+				<li>Z: <input id='z' class="form-control" type="text" ng-model="region.z"></li>
+			</ul>
+			<p>Type of media <input id='type' class="form-control" type="text" ng-model="region.t"></p>
+			<p>Source <input id='src' class="form-control" type="text" ng-model="region.source"></p>
+			<a ng-click='update($index, region)'>Update</a>
+			<a ng-click='delete($index)'>Delete</a>
+		</div>
+	</div>
+</div>

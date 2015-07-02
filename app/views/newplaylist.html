@@ -1,0 +1,7 @@
+<div class='new' ng-controller="NewPlaylistController"> 
+	<h2>Create new Playlist</h2>
+	<ul>
+		<li>Name: <input id='name' class="form-control" type="text"></li>
+	</ul>
+	<a ng-click='create()' ui-sref="root.home.playlist({playlistId : newPlaylistId})">Create</a>
+</div>

@@ -1,0 +1,7 @@
+<div class="clientList">
+	<h1>Clients</h1>
+	<ul>
+		<li ng-repeat="client in clients"><a ui-sref="root.home.client({clientId : client.id})">Client {{client.id}}: {{client.name}} </a></li>
+	</ul>
+	<a ui-sref="root.home.newclient">New client</a>
+</div>
